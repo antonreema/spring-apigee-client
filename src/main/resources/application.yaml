@@ -1,0 +1,17 @@
+# Async using Spring Security 5.1:
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          apigeesample:
+            authorization-grant-type: client_credentials
+            client-id: ${apigee.client_id}
+            client-secret: ${apigee.client_secret}
+        provider:
+          apigeesample:
+            token-uri: https://xxxxx.apigee.net/oauth/client_credential/accesstoken
+
+
+api:
+  url: https://xxxxx.apigee.net/helloworld-processmsg
